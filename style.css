@@ -4,51 +4,52 @@
 */
 
 footer {
-	visibility: hidden;
+  visibility: hidden;
 }
 
-#MainMenu{
-	visibility: hidden;
+#MainMenu {
+  visibility: hidden;
 }
 
 /*Input field label font size*/
-[data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
+[data-testid="stSidebar"][aria-expanded="true"]>div:first-child {
   width: 400px;
 }
-[data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
+
+[data-testid="stSidebar"][aria-expanded="false"]>div:first-child {
   width: 400px;
   margin-left: -400px;
 }
 
-[data-testid="stFileUploader"]>label{
+[data-testid="stFileUploader"]>label {
   text-align: left;
   font-size: 14pt;
   color: black;
   font-weight: 5pt;
 }
 
-div.row-widget.stTextInput>label{
-    text-align: left;
-    font-size: 14pt;
-    color: black;
-    font-weight: 5pt;
-}
-
-div.stNumberInput>label{
+div.row-widget.stTextInput>label {
   text-align: left;
   font-size: 14pt;
   color: black;
   font-weight: 5pt;
 }
 
-div.row-widget.stSelectbox>label{
+div.stNumberInput>label {
   text-align: left;
   font-size: 14pt;
   color: black;
   font-weight: 5pt;
 }
 
-div.row-widget.stMultiSelect>label{
+div.row-widget.stSelectbox>label {
+  text-align: left;
+  font-size: 14pt;
+  color: black;
+  font-weight: 5pt;
+}
+
+div.row-widget.stMultiSelect>label {
   text-align: left;
   font-size: 14pt;
   color: black;
@@ -69,7 +70,7 @@ div.row-widget.stMultiSelect>label{
   cursor: pointer;
 }
 
-.stButton>button:hover{
+.stButton>button:hover {
   background-color: #4d2986;
   color: #FFFFFF;
   font-size: 14pt;
@@ -79,11 +80,11 @@ div.row-widget.stMultiSelect>label{
   outline: none;
 }
 
-.stButton>button:focus:not(:active){
-	color: #FFFFFF;
+.stButton>button:focus:not(:active) {
+  color: #FFFFFF;
 }
 
-.stDownloadButton>button{
+.stDownloadButton>button {
   width: 360px;
   border-radius: 4px;
   background-color: #009286;
@@ -94,10 +95,10 @@ div.row-widget.stMultiSelect>label{
   font-weight: 5pt;
   padding: 10px;
   transition: all 0.5s;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
-.stDownloadButton>button:hover{
+.stDownloadButton>button:hover {
   background-color: #009286;
   color: #FFFFFF;
   font-size: 14pt;
