@@ -1,0 +1,9 @@
+streamlit==1.2.0
+plotly==4.14.2
+psutil==5.8.0
+kaleido==0.2.1
+
+# /usr/bin/python3 /home/ubuntu/.local/bin/streamlit run wheel_map_app.py
+# nohup streamlit run wheel_map_app.py &
+# ps ax | grep wheel
+# kill -9 <PID>

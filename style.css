@@ -1,0 +1,108 @@
+/*
+# is for selecting ID
+. is for selecting class
+*/
+
+footer {
+	visibility: hidden;
+}
+
+#MainMenu{
+	visibility: hidden;
+}
+
+/*Input field label font size*/
+[data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
+  width: 400px;
+}
+[data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
+  width: 400px;
+  margin-left: -400px;
+}
+
+[data-testid="stFileUploader"]>label{
+  text-align: left;
+  font-size: 14pt;
+  color: black;
+  font-weight: 5pt;
+}
+
+div.row-widget.stTextInput>label{
+    text-align: left;
+    font-size: 14pt;
+    color: black;
+    font-weight: 5pt;
+}
+
+div.stNumberInput>label{
+  text-align: left;
+  font-size: 14pt;
+  color: black;
+  font-weight: 5pt;
+}
+
+div.row-widget.stSelectbox>label{
+  text-align: left;
+  font-size: 14pt;
+  color: black;
+  font-weight: 5pt;
+}
+
+div.row-widget.stMultiSelect>label{
+  text-align: left;
+  font-size: 14pt;
+  color: black;
+  font-weight: 5pt;
+}
+
+.stButton>button {
+  width: 360px;
+  border-radius: 4px;
+  background-color: #350a79;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 13pt;
+  font-weight: 5pt;
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.stButton>button:hover{
+  background-color: #4d2986;
+  color: #FFFFFF;
+  font-size: 14pt;
+  font-weight: 8pt;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.stButton>button:focus:not(:active){
+	color: #FFFFFF;
+}
+
+.stDownloadButton>button{
+  width: 360px;
+  border-radius: 4px;
+  background-color: #009286;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 13pt;
+  font-weight: 5pt;
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer; 
+}
+
+.stDownloadButton>button:hover{
+  background-color: #009286;
+  color: #FFFFFF;
+  font-size: 14pt;
+  font-weight: 8pt;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
