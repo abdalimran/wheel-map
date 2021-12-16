@@ -97,7 +97,7 @@ def main():
                                 file_name=f'{"_".join((map(lambda x: x.lower(), title.split())))}.{download_format}')
 
     sidebar.markdown(
-        '<br><p style="text-align:center;">Developed by <a href=https://www.linkedin.com/in/abdalimran/>Imran</a> with ❤️</p>', unsafe_allow_html=True)
+        '<br><p style="text-align:center;">Developed by <a href=https://www.linkedin.com/in/abdalimran/>Imran</a> with ❤️ &copy; 2021</p>', unsafe_allow_html=True)
 
 
 if __name__ == '__main__':
