@@ -56,16 +56,16 @@ def download_data(chart, download_format):
 
 def main():
     sidebar = st.sidebar
-    sidebar.markdown("""<h1>Wheel Map Maker</h1>""", unsafe_allow_html=True)
+    sidebar.markdown("""<h1>🎨 Wheel Map Maker</h1>""", unsafe_allow_html=True)
     main_panel, = st.columns(1)
 
-    file = sidebar.file_uploader("Upload dataset", type=['csv', 'xlsx', 'xls'], help="Uplad a file for visualization. Supported formats: csv, xlsx, xls")
+    file = sidebar.file_uploader("Upload dataset", type=['csv', 'xlsx', 'xls'], help="Upload a file for visualization. Supported formats: csv, xlsx, xls")
     if not file:
         sidebar.write("Upload a .csv or .xlsx file to get started")
         sidebar.markdown(f"[Save](https://raw.githubusercontent.com/abdalimran/wheel-map/main/sample_data_wheel_map.csv) the sample data to try out!", unsafe_allow_html=True)
         with main_panel:
             main_panel.warning(
-                "No datset has been uploaded! Please, upload a dataset to start the process.")
+                "No datset has been uploaded! Please, upload a dataset to build your stunning wheel map! 😃")
         return
     else:
         data = get_df(file)
@@ -101,6 +101,6 @@ def main():
 
 
 if __name__ == '__main__':
-    st.set_page_config(layout="wide", page_title="Wheel Map Maker", page_icon="📊")
+    st.set_page_config(layout="wide", page_title="Wheel Map Maker", page_icon="🎨")
     local_css("style.css")
     main()

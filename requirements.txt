@@ -4,6 +4,10 @@ psutil==5.8.0
 kaleido==0.2.1
 
 # /usr/bin/python3 /home/ubuntu/.local/bin/streamlit run wheel_map_app.py
+
 # nohup streamlit run wheel_map_app.py &
+# setsid streamlit run wheel_map_app.py
+
 # ps ax | grep wheel
+# netstat -tulpn | grep 850.
 # kill -9 <PID>
