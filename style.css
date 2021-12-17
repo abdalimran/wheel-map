@@ -3,6 +3,11 @@
 . is for selecting class
 */
 
+.reportview-container .main .block-container{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 footer {
   visibility: hidden;
 }
@@ -13,12 +18,14 @@ footer {
 
 /*Input field label font size*/
 [data-testid="stSidebar"][aria-expanded="true"]>div:first-child {
-  width: 400px;
+  width: 450px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 [data-testid="stSidebar"][aria-expanded="false"]>div:first-child {
-  width: 400px;
-  margin-left: -400px;
+  width: 450px;
+  margin-left: -450px;
 }
 
 [data-testid="stFileUploader"]>label {
@@ -85,7 +92,9 @@ div.row-widget.stMultiSelect>label {
 }
 
 .stDownloadButton>button {
-  width: 360px;
+  width:70%;
+  margin:0 auto;
+  display:block;
   border-radius: 4px;
   background-color: #009286;
   border: none;

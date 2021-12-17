@@ -75,8 +75,8 @@ def main():
         hierarchy = sidebar.multiselect("Select columns by hierarchy", tuple(all_features), help="Select the columns in a hierarchal order for showing in the wheel map.")
         maxdepth = sidebar.number_input("Maximum depth", min_value=1, max_value=1+len(hierarchy), value=1+len(hierarchy), help="Maximum depth of the wheel hierarchy level.")
         sh, sw = sidebar.columns(2)
-        height = sh.number_input("Height", min_value=500, max_value=2500, value=750, help="Height of the map (plot area) in pixel.")
-        width = sw.number_input("Width", min_value=500, max_value=2500, value=750, help="Width of the map (plot area) in pixel.")
+        height = sh.number_input("Height", min_value=500, max_value=2500, value=850, step=50, help="Height of the map (plot area) in pixel.")
+        width = sw.number_input("Width", min_value=500, max_value=2500, value=850, step=50, help="Width of the map (plot area) in pixel.")
 
         with main_panel:
             chart = wheel_map(data=data,
@@ -91,11 +91,12 @@ def main():
             st.plotly_chart(chart)
 
         download_format = sidebar.selectbox("Select a download format", tuple(["png", "jpeg", "webp", "svg", "pdf", "html (full)", "html (div only)"]), help="Select a format in which you want to download the map.")
-
+        
+        sidebar.write('')
         sidebar.download_button(label='Download Map',
                                 data=download_data(chart, download_format),
-                                file_name=f'{"_".join((map(lambda x: x.lower(), title.split())))}.{download_format}')
-
+                                file_name=f'{"_".join((map(lambda x: x.lower(), title.split())))}.{download_format if download_format not in ["html (full)", "html (div only)"] else "html"}')
+    
     sidebar.markdown(
         '<br><p style="text-align:center;">Developed by <a href=https://www.linkedin.com/in/abdalimran/>Imran</a> with ❤️ &copy; 2021</p>', unsafe_allow_html=True)
 
