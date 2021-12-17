@@ -62,10 +62,10 @@ def main():
     file = sidebar.file_uploader("Upload dataset", type=['csv', 'xlsx', 'xls'], help="Upload a file for visualization. Supported formats: csv, xlsx, xls")
     if not file:
         sidebar.write("Upload a .csv or .xlsx file to get started")
-        sidebar.markdown(f"[Save](https://raw.githubusercontent.com/abdalimran/wheel-map/main/sample_data_wheel_map.csv) the sample data to try out!", unsafe_allow_html=True)
+        sidebar.markdown(f"[Save & Upload](https://raw.githubusercontent.com/abdalimran/wheel-map/main/sample_data_wheel_map.csv) this sample data to try out!", unsafe_allow_html=True)
         with main_panel:
             main_panel.warning(
-                "No datset has been uploaded! Please, upload a dataset to build your stunning wheel map! 😃")
+                "No datset has been uploaded! Please, upload a dataset to build your stunning wheel map! 😎")
         return
     else:
         data = get_df(file)
