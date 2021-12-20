@@ -21,7 +21,7 @@ def get_df(file):
 
 
 @st.cache()
-def wheel_map(data, title, center_label, hierarchy, color, maxdepth=None, height=750, width=750):
+def wheel_map(data, title, center_label, hierarchy, color, maxdepth=None, theme="plotly", height=850, width=850):
     data = data.fillna(" ")
     data['center_label'] = center_label
 
@@ -29,6 +29,7 @@ def wheel_map(data, title, center_label, hierarchy, color, maxdepth=None, height
                       path=['center_label']+hierarchy,
                       maxdepth=maxdepth,
                       color=color,
+                      template=theme,
                       width=width,
                       height=height)
 
@@ -74,6 +75,7 @@ def main():
         center_label = sidebar.text_input("Center label", help="Give a name for the center of the wheel.")
         hierarchy = sidebar.multiselect("Select columns by hierarchy", tuple(all_features), help="Select the columns in a hierarchal order for showing in the wheel map.")
         maxdepth = sidebar.number_input("Maximum depth", min_value=1, max_value=1+len(hierarchy), value=1+len(hierarchy), help="Maximum depth of the wheel hierarchy level.")
+        theme = sidebar.selectbox("Select a theme", tuple(["plotly", "ggplot2", "seaborn", "simple_white"]), help="Choose your favorite color theme for your map.")
         sh, sw = sidebar.columns(2)
         height = sh.number_input("Height", min_value=500, max_value=2500, value=850, step=50, help="Height of the map (plot area) in pixel.")
         width = sw.number_input("Width", min_value=500, max_value=2500, value=850, step=50, help="Width of the map (plot area) in pixel.")
@@ -85,6 +87,7 @@ def main():
                               hierarchy=hierarchy,
                               color=hierarchy[0] if hierarchy else all_features[0],
                               maxdepth=maxdepth,
+                              theme=theme,
                               height=height,
                               width=width)
 
